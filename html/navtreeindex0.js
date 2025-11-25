@@ -1,0 +1,27 @@
+var NAVTREEINDEX0 =
+{
+"_analyzer_8hpp_source.html":[2,0,0],
+"_character_8hpp_source.html":[2,0,1],
+"_item_8hpp_source.html":[2,0,2],
+"_strategy_8hpp_source.html":[2,0,3],
+"annotated.html":[1,0],
+"class_aggressive_strategy.html":[1,0,0],
+"class_battle_simulator.html":[1,0,1],
+"class_character.html":[1,0,2],
+"class_defensive_strategy.html":[1,0,3],
+"class_entity.html":[1,0,4],
+"class_i_combat_strategy.html":[1,0,5],
+"class_item.html":[1,0,6],
+"class_lore_a_i.html":[1,0,7],
+"class_mage.html":[1,0,8],
+"class_potion.html":[1,0,9],
+"class_warrior.html":[1,0,10],
+"class_weapon.html":[1,0,11],
+"classes.html":[1,1],
+"files.html":[2,0],
+"hierarchy.html":[1,2],
+"index.html":[],
+"md__r_e_a_d_m_e.html":[0],
+"pages.html":[],
+"struct_lore_a_i_1_1_game_info.html":[1,0,7,0]
+};

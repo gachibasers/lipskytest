@@ -1,0 +1,3 @@
+C:/Users/sasak/Documents/antonchik/cmake-build-debug/CMakeFiles/game_app.dir
+C:/Users/sasak/Documents/antonchik/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/sasak/Documents/antonchik/cmake-build-debug/CMakeFiles/rebuild_cache.dir

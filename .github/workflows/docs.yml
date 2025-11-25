@@ -3,38 +3,28 @@ name: Generate Doxygen Docs
 on:
   push:
     branches:
-      - docs-ci
-  workflow_dispatch:
+      - docs-ci 
+  pull_request:
 
 jobs:
-  doxygen:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        ref: docs-ci
 
-      - name: Install Doxygen
-        run: |
-          sudo apt update
-          sudo apt install -y doxygen graphviz
+    - name: Set up Doxygen and Graphviz
+      run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
 
-      - name: Build Documentation
-        run: |
-          doxygen Doxyfile
+    - name: Generate Doxygen documentation
+      run: doxygen Doxyfile
 
-      - name: Upload docs artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./html   # ця папка має відповідати HTML_OUTPUT у Doxyfile
-
-  deploy:
-    needs: doxygen
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.LYPSKYLAB2 }}
+        publish_branch: gh-pages 
+        publish_dir: ./html

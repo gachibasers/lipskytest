@@ -1,0 +1,68 @@
+\doxysection{Analyzer.\+hpp}
+\hypertarget{_analyzer_8hpp_source}{}\label{_analyzer_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ANTONCHIK\_ANALYZER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ANTONCHIK\_ANALYZER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_battle_simulator}{BattleSimulator}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ calculateWinChance(\textcolor{keyword}{const}\ std::vector<T>\&\ teamA,\ \textcolor{keyword}{const}\ std::vector<T>\&\ teamB)\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ hpA\ =\ 0,\ hpB\ =\ 0;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ unit\ :\ teamA)\ hpA\ +=\ unit-\/>getHp();}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ unit\ :\ teamB)\ hpB\ +=\ unit-\/>getHp();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hpA\ +\ hpB\ ==\ 0)\ \textcolor{keywordflow}{return}\ 0.0;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (hpA\ /\ (hpA\ +\ hpB))\ *\ 100.0;}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ T\ findTankiest(\textcolor{keyword}{const}\ std::vector<T>\&\ units)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (units.empty())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ T\ best\ =\ units[0];}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ unit\ :\ units)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (unit-\/>getHp()\ >\ best-\/>getHp())\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ best\ =\ unit;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ best;}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lore_a_i}{LoreAI}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_lore_a_i_1_1_game_info}{GameInfo}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::string\ genre;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ difficultyRating;}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{struct_lore_a_i_1_1_game_info}{GameInfo}}\ analyzeDescription(\textcolor{keyword}{const}\ std::string\&\ desc)\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_lore_a_i_1_1_game_info}{GameInfo}}\ info;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ info.difficultyRating\ =\ 1;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ info.genre\ =\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::string\ lowerDesc\ =\ desc;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ c\ :\ lowerDesc)\ c\ =\ tolower(c);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lowerDesc.find(\textcolor{stringliteral}{"{}dragon"{}})\ !=\ std::string::npos\ ||\ lowerDesc.find(\textcolor{stringliteral}{"{}magic"{}})\ !=\ std::string::npos)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ info.genre\ =\ \textcolor{stringliteral}{"{}Fantasy\ RPG"{}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lowerDesc.find(\textcolor{stringliteral}{"{}gun"{}})\ !=\ std::string::npos)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ info.genre\ =\ \textcolor{stringliteral}{"{}Shooter"{}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lowerDesc.find(\textcolor{stringliteral}{"{}hardcore"{}})\ !=\ std::string::npos)\ info.difficultyRating\ +=\ 5;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lowerDesc.find(\textcolor{stringliteral}{"{}dark"{}})\ !=\ std::string::npos)\ info.difficultyRating\ +=\ 2;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lowerDesc.find(\textcolor{stringliteral}{"{}easy"{}})\ !=\ std::string::npos)\ info.difficultyRating\ -\/=\ 2;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ info;}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ANTONCHIK\_ANALYZER\_H}}
+
+\end{DoxyCode}

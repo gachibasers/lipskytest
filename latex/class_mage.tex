@@ -1,0 +1,83 @@
+\doxysection{Mage Class Reference}
+\hypertarget{class_mage}{}\label{class_mage}\index{Mage@{Mage}}
+Inheritance diagram for Mage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_mage}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mage_aba27590bf2316c3e0db5976c603c824b}\label{class_mage_aba27590bf2316c3e0db5976c603c824b} 
+{\bfseries Mage} (std\+::string n, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_combat_strategy}{ICombat\+Strategy}} $>$ s)
+\item 
+void \mbox{\hyperlink{class_mage_a826c6789fd6c593a83b6b969d3e9effa}{update}} () override
+\item 
+int \mbox{\hyperlink{class_mage_ac031ff93bc83c9b4b72cfa7d5bbb36c3}{perform\+Turn}} (\mbox{\hyperlink{class_character}{Character}} \texorpdfstring{$\ast$}{*}target) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_character}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Character} (std\+::string n, int h, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_combat_strategy}{ICombat\+Strategy}} $>$ s)
+\item 
+bool {\bfseries is\+Alive} () const
+\item 
+std\+::string {\bfseries get\+Name} () const
+\item 
+int {\bfseries get\+Hp} () const
+\item 
+void {\bfseries add\+Item} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_item}{Item}} $>$ it)
+\item 
+void {\bfseries gain\+Xp} (int amount)
+\item 
+void {\bfseries take\+Damage} (int dmg)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_character}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\item 
+int {\bfseries hp}
+\item 
+int {\bfseries max\+Hp}
+\item 
+int {\bfseries xp}
+\item 
+int {\bfseries level}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_item}{Item}} $>$ $>$ {\bfseries inventory}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_combat_strategy}{ICombat\+Strategy}} $>$ {\bfseries ai}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_mage_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mage_ac031ff93bc83c9b4b72cfa7d5bbb36c3}\index{Mage@{Mage}!performTurn@{performTurn}}
+\index{performTurn@{performTurn}!Mage@{Mage}}
+\doxysubsubsection{\texorpdfstring{performTurn()}{performTurn()}}
+{\footnotesize\ttfamily \label{class_mage_ac031ff93bc83c9b4b72cfa7d5bbb36c3} 
+int Mage\+::perform\+Turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_character}{Character}} \texorpdfstring{$\ast$}{*}}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_character}{Character}}.
+
+\Hypertarget{class_mage_a826c6789fd6c593a83b6b969d3e9effa}\index{Mage@{Mage}!update@{update}}
+\index{update@{update}!Mage@{Mage}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_mage_a826c6789fd6c593a83b6b969d3e9effa} 
+void Mage\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_entity}{Entity}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Character.\+hpp\end{DoxyCompactItemize}

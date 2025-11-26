@@ -1,0 +1,69 @@
+\doxysection{Character Class Reference}
+\hypertarget{class_character}{}\label{class_character}\index{Character@{Character}}
+Inheritance diagram for Character\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_character}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_character_a8d207df75d8b6c082bcbb2777778a4b0}\label{class_character_a8d207df75d8b6c082bcbb2777778a4b0} 
+{\bfseries Character} (std\+::string n, int h, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_combat_strategy}{ICombat\+Strategy}} $>$ s)
+\item 
+\Hypertarget{class_character_aced814c6549d4243897ab976d243bd5c}\label{class_character_aced814c6549d4243897ab976d243bd5c} 
+bool {\bfseries is\+Alive} () const
+\item 
+\Hypertarget{class_character_ad79f892fe576c7ef0804cad502d94517}\label{class_character_ad79f892fe576c7ef0804cad502d94517} 
+std\+::string {\bfseries get\+Name} () const
+\item 
+\Hypertarget{class_character_a5498d08a9dbfa968420ea8f5cb98ec3d}\label{class_character_a5498d08a9dbfa968420ea8f5cb98ec3d} 
+int {\bfseries get\+Hp} () const
+\item 
+\Hypertarget{class_character_a00f7db9f015fcb4a197370e2a7d2ca91}\label{class_character_a00f7db9f015fcb4a197370e2a7d2ca91} 
+void {\bfseries add\+Item} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_item}{Item}} $>$ it)
+\item 
+\Hypertarget{class_character_abd17674e8c7b1e7b04f3f703424afdb0}\label{class_character_abd17674e8c7b1e7b04f3f703424afdb0} 
+void {\bfseries gain\+Xp} (int amount)
+\item 
+\Hypertarget{class_character_a2827d85b96fd2944b6599ad0fc1586f1}\label{class_character_a2827d85b96fd2944b6599ad0fc1586f1} 
+void {\bfseries take\+Damage} (int dmg)
+\item 
+\Hypertarget{class_character_a55a5131f805aca1b307b412380f2bca3}\label{class_character_a55a5131f805aca1b307b412380f2bca3} 
+virtual int {\bfseries perform\+Turn} (\mbox{\hyperlink{class_character}{Character}} \texorpdfstring{$\ast$}{*}target)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries update} ()=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_character_a6592c35167738421f3e04ca8808d37db}\label{class_character_a6592c35167738421f3e04ca8808d37db} 
+std\+::string {\bfseries name}
+\item 
+\Hypertarget{class_character_a273353643988a87a0ce03cff3870b2d9}\label{class_character_a273353643988a87a0ce03cff3870b2d9} 
+int {\bfseries hp}
+\item 
+\Hypertarget{class_character_a39fd1fe17224ce4aae67ae08848533e6}\label{class_character_a39fd1fe17224ce4aae67ae08848533e6} 
+int {\bfseries max\+Hp}
+\item 
+\Hypertarget{class_character_ac790eb0f81e8e1f379790cb8830dc59a}\label{class_character_ac790eb0f81e8e1f379790cb8830dc59a} 
+int {\bfseries xp}
+\item 
+\Hypertarget{class_character_af15a478fe650b87f59cbe5d071697307}\label{class_character_af15a478fe650b87f59cbe5d071697307} 
+int {\bfseries level}
+\item 
+\Hypertarget{class_character_a4b781b13dfc99a1e8758ca25d6144f30}\label{class_character_a4b781b13dfc99a1e8758ca25d6144f30} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_item}{Item}} $>$ $>$ {\bfseries inventory}
+\item 
+\Hypertarget{class_character_a94b77b81f4509c226da2ab5b7bdf485c}\label{class_character_a94b77b81f4509c226da2ab5b7bdf485c} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_combat_strategy}{ICombat\+Strategy}} $>$ {\bfseries ai}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Character.\+hpp\end{DoxyCompactItemize}

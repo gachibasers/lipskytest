@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['character_0',['Character',['../class_character.html',1,'']]]
+  ['battlesimulator_0',['BattleSimulator',['../class_battle_simulator.html',1,'']]]
 ];

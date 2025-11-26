@@ -1,0 +1,45 @@
+\doxysection{Strategy.\+hpp}
+\hypertarget{_strategy_8hpp_source}{}\label{_strategy_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ANTONCHIK\_STRATEGY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ANTONCHIK\_STRATEGY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_combat_strategy}{ICombatStrategy}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_combat_strategy}{\string~ICombatStrategy}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ decideAction(\textcolor{keywordtype}{int}\ currentHp,\ \textcolor{keywordtype}{int}\ maxHp,\ \textcolor{keywordtype}{int}\ enemyHp)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ getName()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_aggressive_strategy}{AggressiveStrategy}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_combat_strategy}{ICombatStrategy}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ getName()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Berserker"{}};\ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ decideAction(\textcolor{keywordtype}{int}\ currentHp,\ \textcolor{keywordtype}{int}\ maxHp,\ \textcolor{keywordtype}{int}\ enemyHp)\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enemyHp\ <\ 20)\ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\textcolor{keywordtype}{double})currentHp\ /\ maxHp\ >\ 0.4)\ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (rand()\ \%\ 2);}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_defensive_strategy}{DefensiveStrategy}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_combat_strategy}{ICombatStrategy}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ std::string\ getName()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Tactician"{}};\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ decideAction(\textcolor{keywordtype}{int}\ currentHp,\ \textcolor{keywordtype}{int}\ maxHp,\ \textcolor{keywordtype}{int}\ enemyHp)\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\textcolor{keywordtype}{double})currentHp\ /\ maxHp\ <\ 0.3)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ANTONCHIK\_STRATEGY\_H}}
+
+\end{DoxyCode}

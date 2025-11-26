@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mage_0',['Mage',['../classMage.html',1,'']]]
+  ['warrior_0',['Warrior',['../classWarrior.html',1,'']]],
+  ['weapon_1',['Weapon',['../classWeapon.html',1,'']]]
 ];

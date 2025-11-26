@@ -96,6 +96,9 @@ $(document).ready(function(){initNavTree('classAggressiveStrategy.html',''); ini
 </div><!--header-->
 <div class="contents">
 
+<p>Aggressive "Berserker" strategy.  
+ <a href="classAggressiveStrategy.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Strategy_8hpp_source.html">Strategy.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for AggressiveStrategy:</div>
@@ -103,7 +106,7 @@ Inheritance diagram for AggressiveStrategy:</div>
  <div class="center">
   <img src="classAggressiveStrategy.png" usemap="#AggressiveStrategy_map" alt=""/>
   <map id="AggressiveStrategy_map" name="AggressiveStrategy_map">
-<area href="classICombatStrategy.html" alt="ICombatStrategy" shape="rect" coords="0,0,123,24"/>
+<area href="classICombatStrategy.html" title="Interface for all combat strategies." alt="ICombatStrategy" shape="rect" coords="0,0,123,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -117,7 +120,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae06795f39149539bf3589fac93081bf1 inherit pub_methods_classICombatStrategy" id="r_ae06795f39149539bf3589fac93081bf1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICombatStrategy.html#ae06795f39149539bf3589fac93081bf1">~ICombatStrategy</a> ()=default</td></tr>
 <tr class="separator:ae06795f39149539bf3589fac93081bf1 inherit pub_methods_classICombatStrategy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Aggressive "Berserker" strategy. </p>
+<p>A character using this strategy tends to attack aggressively most of the time. Behavior rules:</p><ul>
+<li>If the enemy HP &lt; 20 → always attack aggressively.</li>
+<li>If own HP &gt; 40% → aggressive attack.</li>
+<li>Otherwise → randomly choose between normal and aggressive attack. </li>
+</ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aec2dce7bacbabbbb47b5bc32485fd45c" name="aec2dce7bacbabbbb47b5bc32485fd45c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec2dce7bacbabbbb47b5bc32485fd45c">&#9670;&#160;</a></span>decideAction()</h2>
 
@@ -157,6 +167,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Strategy name: "Berserker". </dd></dl>
 
 <p>Implements <a class="el" href="classICombatStrategy.html#a9775546579fd1987b84db81ab3b3f9bf">ICombatStrategy</a>.</p>
 

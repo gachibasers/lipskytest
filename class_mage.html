@@ -91,57 +91,100 @@ $(function(){initNavTree('class_mage.html','','class_mage-members'); });
   <div class="headertitle"><div class="title">Mage Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Клас мага — герой з маною та магічними атаками.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_character_8hpp_source.html">Character.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Mage:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_mage.png" usemap="#Mage_map" alt=""/>
   <map id="Mage_map" name="Mage_map">
-<area href="class_character.html" alt="Character" shape="rect" coords="0,56,69,80"/>
-<area href="class_entity.html" alt="Entity" shape="rect" coords="0,0,69,24"/>
+<area href="class_character.html" title="Базовий клас ігрового персонажа." alt="Character" shape="rect" coords="0,56,69,80"/>
+<area href="class_entity.html" title="Базовий інтерфейс для всіх оновлюваних сутностей гри." alt="Entity" shape="rect" coords="0,0,69,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aba27590bf2316c3e0db5976c603c824b" id="r_aba27590bf2316c3e0db5976c603c824b"><td class="memItemLeft" align="right" valign="top"><a id="aba27590bf2316c3e0db5976c603c824b" name="aba27590bf2316c3e0db5976c603c824b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Mage</b> (std::string n, std::unique_ptr&lt; <a class="el" href="class_i_combat_strategy.html">ICombatStrategy</a> &gt; s)</td></tr>
+<tr class="memitem:aba27590bf2316c3e0db5976c603c824b" id="r_aba27590bf2316c3e0db5976c603c824b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba27590bf2316c3e0db5976c603c824b">Mage</a> (std::string n, std::unique_ptr&lt; <a class="el" href="class_i_combat_strategy.html">ICombatStrategy</a> &gt; s)</td></tr>
+<tr class="memdesc:aba27590bf2316c3e0db5976c603c824b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Створює мага з початковою маною 100.  <br /></td></tr>
 <tr class="memitem:a826c6789fd6c593a83b6b969d3e9effa" id="r_a826c6789fd6c593a83b6b969d3e9effa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a826c6789fd6c593a83b6b969d3e9effa">update</a> () override</td></tr>
+<tr class="memdesc:a826c6789fd6c593a83b6b969d3e9effa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оновлення стану — кожен хід додає 5 мани.  <br /></td></tr>
 <tr class="memitem:ac031ff93bc83c9b4b72cfa7d5bbb36c3" id="r_ac031ff93bc83c9b4b72cfa7d5bbb36c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac031ff93bc83c9b4b72cfa7d5bbb36c3">performTurn</a> (<a class="el" href="class_character.html">Character</a> *target) override</td></tr>
+<tr class="memdesc:ac031ff93bc83c9b4b72cfa7d5bbb36c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виконує хід:  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_character"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_character')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_character.html">Character</a></td></tr>
-<tr class="memitem:a8d207df75d8b6c082bcbb2777778a4b0 inherit pub_methods_class_character" id="r_a8d207df75d8b6c082bcbb2777778a4b0"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Character</b> (std::string n, int h, std::unique_ptr&lt; <a class="el" href="class_i_combat_strategy.html">ICombatStrategy</a> &gt; s)</td></tr>
-<tr class="memitem:aced814c6549d4243897ab976d243bd5c inherit pub_methods_class_character" id="r_aced814c6549d4243897ab976d243bd5c"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isAlive</b> () const</td></tr>
-<tr class="memitem:ad79f892fe576c7ef0804cad502d94517 inherit pub_methods_class_character" id="r_ad79f892fe576c7ef0804cad502d94517"><td class="memItemLeft" align="right" valign="top">
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
-<tr class="memitem:a5498d08a9dbfa968420ea8f5cb98ec3d inherit pub_methods_class_character" id="r_a5498d08a9dbfa968420ea8f5cb98ec3d"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getHp</b> () const</td></tr>
-<tr class="memitem:a00f7db9f015fcb4a197370e2a7d2ca91 inherit pub_methods_class_character" id="r_a00f7db9f015fcb4a197370e2a7d2ca91"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addItem</b> (std::shared_ptr&lt; <a class="el" href="class_item.html">Item</a> &gt; it)</td></tr>
-<tr class="memitem:abd17674e8c7b1e7b04f3f703424afdb0 inherit pub_methods_class_character" id="r_abd17674e8c7b1e7b04f3f703424afdb0"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>gainXp</b> (int amount)</td></tr>
-<tr class="memitem:a2827d85b96fd2944b6599ad0fc1586f1 inherit pub_methods_class_character" id="r_a2827d85b96fd2944b6599ad0fc1586f1"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>takeDamage</b> (int dmg)</td></tr>
+<tr class="memitem:a8d207df75d8b6c082bcbb2777778a4b0 inherit pub_methods_class_character" id="r_a8d207df75d8b6c082bcbb2777778a4b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a8d207df75d8b6c082bcbb2777778a4b0">Character</a> (std::string n, int h, std::unique_ptr&lt; <a class="el" href="class_i_combat_strategy.html">ICombatStrategy</a> &gt; s)</td></tr>
+<tr class="memdesc:a8d207df75d8b6c082bcbb2777778a4b0 inherit pub_methods_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Створює персонажа з імʼям, HP та AI.  <br /></td></tr>
+<tr class="memitem:aced814c6549d4243897ab976d243bd5c inherit pub_methods_class_character" id="r_aced814c6549d4243897ab976d243bd5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#aced814c6549d4243897ab976d243bd5c">isAlive</a> () const</td></tr>
+<tr class="memdesc:aced814c6549d4243897ab976d243bd5c inherit pub_methods_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевіряє чи живий персонаж.  <br /></td></tr>
+<tr class="memitem:ad79f892fe576c7ef0804cad502d94517 inherit pub_methods_class_character" id="r_ad79f892fe576c7ef0804cad502d94517"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#ad79f892fe576c7ef0804cad502d94517">getName</a> () const</td></tr>
+<tr class="memdesc:ad79f892fe576c7ef0804cad502d94517 inherit pub_methods_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повертає імʼя персонажа.  <br /></td></tr>
+<tr class="memitem:a5498d08a9dbfa968420ea8f5cb98ec3d inherit pub_methods_class_character" id="r_a5498d08a9dbfa968420ea8f5cb98ec3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a5498d08a9dbfa968420ea8f5cb98ec3d">getHp</a> () const</td></tr>
+<tr class="memdesc:a5498d08a9dbfa968420ea8f5cb98ec3d inherit pub_methods_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повертає поточні очки здоровʼя.  <br /></td></tr>
+<tr class="memitem:a00f7db9f015fcb4a197370e2a7d2ca91 inherit pub_methods_class_character" id="r_a00f7db9f015fcb4a197370e2a7d2ca91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a00f7db9f015fcb4a197370e2a7d2ca91">addItem</a> (std::shared_ptr&lt; <a class="el" href="class_item.html">Item</a> &gt; it)</td></tr>
+<tr class="memdesc:a00f7db9f015fcb4a197370e2a7d2ca91 inherit pub_methods_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Додає предмет у інвентар.  <br /></td></tr>
+<tr class="memitem:abd17674e8c7b1e7b04f3f703424afdb0 inherit pub_methods_class_character" id="r_abd17674e8c7b1e7b04f3f703424afdb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#abd17674e8c7b1e7b04f3f703424afdb0">gainXp</a> (int amount)</td></tr>
+<tr class="memdesc:abd17674e8c7b1e7b04f3f703424afdb0 inherit pub_methods_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Додає досвід та підвищує рівень при досягненні порогу.  <br /></td></tr>
+<tr class="memitem:a2827d85b96fd2944b6599ad0fc1586f1 inherit pub_methods_class_character" id="r_a2827d85b96fd2944b6599ad0fc1586f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a2827d85b96fd2944b6599ad0fc1586f1">takeDamage</a> (int dmg)</td></tr>
+<tr class="memdesc:a2827d85b96fd2944b6599ad0fc1586f1 inherit pub_methods_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Застосовує пошкодження до персонажа.  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_entity"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_entity')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_entity.html">Entity</a></td></tr>
+<tr class="memitem:ac479d009ddde62dfb378ca0a70d81307 inherit pub_methods_class_entity" id="r_ac479d009ddde62dfb378ca0a70d81307"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ac479d009ddde62dfb378ca0a70d81307">~Entity</a> ()=default</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_character"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_character')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="class_character.html">Character</a></td></tr>
-<tr class="memitem:a6592c35167738421f3e04ca8808d37db inherit pro_attribs_class_character" id="r_a6592c35167738421f3e04ca8808d37db"><td class="memItemLeft" align="right" valign="top">
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
-<tr class="memitem:a273353643988a87a0ce03cff3870b2d9 inherit pro_attribs_class_character" id="r_a273353643988a87a0ce03cff3870b2d9"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>hp</b></td></tr>
-<tr class="memitem:a39fd1fe17224ce4aae67ae08848533e6 inherit pro_attribs_class_character" id="r_a39fd1fe17224ce4aae67ae08848533e6"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>maxHp</b></td></tr>
-<tr class="memitem:ac790eb0f81e8e1f379790cb8830dc59a inherit pro_attribs_class_character" id="r_ac790eb0f81e8e1f379790cb8830dc59a"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>xp</b></td></tr>
-<tr class="memitem:af15a478fe650b87f59cbe5d071697307 inherit pro_attribs_class_character" id="r_af15a478fe650b87f59cbe5d071697307"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>level</b></td></tr>
-<tr class="memitem:a4b781b13dfc99a1e8758ca25d6144f30 inherit pro_attribs_class_character" id="r_a4b781b13dfc99a1e8758ca25d6144f30"><td class="memItemLeft" align="right" valign="top">
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_item.html">Item</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>inventory</b></td></tr>
-<tr class="memitem:a94b77b81f4509c226da2ab5b7bdf485c inherit pro_attribs_class_character" id="r_a94b77b81f4509c226da2ab5b7bdf485c"><td class="memItemLeft" align="right" valign="top">
-std::unique_ptr&lt; <a class="el" href="class_i_combat_strategy.html">ICombatStrategy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ai</b></td></tr>
+<tr class="memitem:a6592c35167738421f3e04ca8808d37db inherit pro_attribs_class_character" id="r_a6592c35167738421f3e04ca8808d37db"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a6592c35167738421f3e04ca8808d37db">name</a></td></tr>
+<tr class="memdesc:a6592c35167738421f3e04ca8808d37db inherit pro_attribs_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Імʼя персонажа.  <br /></td></tr>
+<tr class="memitem:a273353643988a87a0ce03cff3870b2d9 inherit pro_attribs_class_character" id="r_a273353643988a87a0ce03cff3870b2d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a273353643988a87a0ce03cff3870b2d9">hp</a></td></tr>
+<tr class="memdesc:a273353643988a87a0ce03cff3870b2d9 inherit pro_attribs_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поточні очки здоровʼя.  <br /></td></tr>
+<tr class="memitem:a39fd1fe17224ce4aae67ae08848533e6 inherit pro_attribs_class_character" id="r_a39fd1fe17224ce4aae67ae08848533e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a39fd1fe17224ce4aae67ae08848533e6">maxHp</a></td></tr>
+<tr class="memdesc:a39fd1fe17224ce4aae67ae08848533e6 inherit pro_attribs_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимальні очки здоровʼя.  <br /></td></tr>
+<tr class="memitem:ac790eb0f81e8e1f379790cb8830dc59a inherit pro_attribs_class_character" id="r_ac790eb0f81e8e1f379790cb8830dc59a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#ac790eb0f81e8e1f379790cb8830dc59a">xp</a></td></tr>
+<tr class="memdesc:ac790eb0f81e8e1f379790cb8830dc59a inherit pro_attribs_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Досвід персонажа.  <br /></td></tr>
+<tr class="memitem:af15a478fe650b87f59cbe5d071697307 inherit pro_attribs_class_character" id="r_af15a478fe650b87f59cbe5d071697307"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#af15a478fe650b87f59cbe5d071697307">level</a></td></tr>
+<tr class="memdesc:af15a478fe650b87f59cbe5d071697307 inherit pro_attribs_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поточний рівень.  <br /></td></tr>
+<tr class="memitem:a4b781b13dfc99a1e8758ca25d6144f30 inherit pro_attribs_class_character" id="r_a4b781b13dfc99a1e8758ca25d6144f30"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_item.html">Item</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a4b781b13dfc99a1e8758ca25d6144f30">inventory</a></td></tr>
+<tr class="memdesc:a4b781b13dfc99a1e8758ca25d6144f30 inherit pro_attribs_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Інвентар.  <br /></td></tr>
+<tr class="memitem:a94b77b81f4509c226da2ab5b7bdf485c inherit pro_attribs_class_character" id="r_a94b77b81f4509c226da2ab5b7bdf485c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_i_combat_strategy.html">ICombatStrategy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_character.html#a94b77b81f4509c226da2ab5b7bdf485c">ai</a></td></tr>
+<tr class="memdesc:a94b77b81f4509c226da2ab5b7bdf485c inherit pro_attribs_class_character"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вибрана стратегія бою (AI).  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Клас мага — герой з маною та магічними атаками. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aba27590bf2316c3e0db5976c603c824b" name="aba27590bf2316c3e0db5976c603c824b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba27590bf2316c3e0db5976c603c824b">&#9670;&#160;</a></span>Mage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mage::Mage </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_i_combat_strategy.html">ICombatStrategy</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>s</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Створює мага з початковою маною 100. </p>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="ac031ff93bc83c9b4b72cfa7d5bbb36c3" name="ac031ff93bc83c9b4b72cfa7d5bbb36c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac031ff93bc83c9b4b72cfa7d5bbb36c3">&#9670;&#160;</a></span>performTurn()</h2>
@@ -166,7 +209,21 @@ std::unique_ptr&lt; <a class="el" href="class_i_combat_strategy.html">ICombatStr
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_character.html">Character</a>.</p>
+<p>Виконує хід: </p>
+<ul>
+<li>лікує себе якщо AI повертає 2</li>
+<li>застосовує магічну атаку якщо є мана</li>
+<li>медитує якщо мани недостатньо</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>Ціль </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Нанесена шкода </dd></dl>
+
+<p>Implements <a class="el" href="class_character.html#a55a5131f805aca1b307b412380f2bca3">Character</a>.</p>
 
 </div>
 </div>
@@ -193,7 +250,9 @@ std::unique_ptr&lt; <a class="el" href="class_i_combat_strategy.html">ICombatStr
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_entity.html">Entity</a>.</p>
+<p>Оновлення стану — кожен хід додає 5 мани. </p>
+
+<p>Implements <a class="el" href="class_entity.html#a59a29d9b7474baf13c9c76859242287d">Entity</a>.</p>
 
 </div>
 </div>

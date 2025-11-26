@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hp_0',['hp',['../classCharacter.html#a273353643988a87a0ce03cff3870b2d9',1,'Character']]]
+  ['level_0',['level',['../classCharacter.html#af15a478fe650b87f59cbe5d071697307',1,'Character']]]
 ];

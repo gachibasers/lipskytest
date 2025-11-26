@@ -90,7 +90,8 @@ $(document).ready(function(){initNavTree('Analyzer_8hpp.html',''); initResizable
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Analyzer.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -103,12 +104,47 @@ $(document).ready(function(){initNavTree('Analyzer_8hpp.html',''); initResizable
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBattleSimulator.html">BattleSimulator&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic battle simulation helper.  <a href="classBattleSimulator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLoreAI.html">LoreAI</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLoreAI_1_1GameInfo.html">LoreAI::GameInfo</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af26756f0a0b4b47c76752d79229e0573" id="r_af26756f0a0b4b47c76752d79229e0573"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af26756f0a0b4b47c76752d79229e0573"><td class="memTemplItemLeft" align="right" valign="top">class <a class="el" href="classBattleSimulator.html">BattleSimulator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="Analyzer_8hpp.html#af26756f0a0b4b47c76752d79229e0573">findTankiest</a> (const std::vector&lt; T &gt; &amp;units)</td></tr>
+<tr class="memdesc:af26756f0a0b4b47c76752d79229e0573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the tankiest (highest HP) unit in a team.  <br /></td></tr>
+<tr class="separator:af26756f0a0b4b47c76752d79229e0573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="af26756f0a0b4b47c76752d79229e0573" name="af26756f0a0b4b47c76752d79229e0573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af26756f0a0b4b47c76752d79229e0573">&#9670;&#160;</a></span>findTankiest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="classBattleSimulator.html">BattleSimulator</a> findTankiest </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>units</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Finds the tankiest (highest HP) unit in a team. </p>
+<p>Iterates over all units and selects the one with the greatest HP.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">units</td><td>Vector of units to evaluate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The pointer T to the tankiest unit, or nullptr if the list is empty. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

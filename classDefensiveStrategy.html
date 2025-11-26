@@ -103,7 +103,7 @@ Inheritance diagram for DefensiveStrategy:</div>
  <div class="center">
   <img src="classDefensiveStrategy.png" usemap="#DefensiveStrategy_map" alt=""/>
   <map id="DefensiveStrategy_map" name="DefensiveStrategy_map">
-<area href="classICombatStrategy.html" alt="ICombatStrategy" shape="rect" coords="0,0,116,24"/>
+<area href="classICombatStrategy.html" title="Interface for all combat strategies." alt="ICombatStrategy" shape="rect" coords="0,0,116,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -112,6 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad0a89345698cc5f0736144eb4f351a3d" id="r_ad0a89345698cc5f0736144eb4f351a3d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDefensiveStrategy.html#ad0a89345698cc5f0736144eb4f351a3d">getName</a> () const override</td></tr>
 <tr class="separator:ad0a89345698cc5f0736144eb4f351a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8db29a1faa732d953ef2e7f29f54697" id="r_ad8db29a1faa732d953ef2e7f29f54697"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDefensiveStrategy.html#ad8db29a1faa732d953ef2e7f29f54697">decideAction</a> (int currentHp, int maxHp, int enemyHp) const override</td></tr>
+<tr class="memdesc:ad8db29a1faa732d953ef2e7f29f54697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chooses defensive action if health is critically low.  <br /></td></tr>
 <tr class="separator:ad8db29a1faa732d953ef2e7f29f54697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classICombatStrategy"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classICombatStrategy')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classICombatStrategy.html">ICombatStrategy</a></td></tr>
 <tr class="memitem:ae06795f39149539bf3589fac93081bf1 inherit pub_methods_classICombatStrategy" id="r_ae06795f39149539bf3589fac93081bf1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICombatStrategy.html#ae06795f39149539bf3589fac93081bf1">~ICombatStrategy</a> ()=default</td></tr>
@@ -157,6 +158,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Chooses defensive action if health is critically low. </p>
 
 <p>Implements <a class="el" href="classICombatStrategy.html#a9775546579fd1987b84db81ab3b3f9bf">ICombatStrategy</a>.</p>
 

@@ -1,6 +1,5 @@
 var Analyzer_8hpp =
 [
     [ "BattleSimulator< T >", "classBattleSimulator.html", null ],
-    [ "LoreAI", "classLoreAI.html", "classLoreAI" ],
-    [ "LoreAI::GameInfo", "structLoreAI_1_1GameInfo.html", "structLoreAI_1_1GameInfo" ]
+    [ "findTankiest", "Analyzer_8hpp.html#af26756f0a0b4b47c76752d79229e0573", null ]
 ];

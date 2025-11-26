@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loreai_0',['LoreAI',['../classLoreAI.html',1,'']]]
+  ['potion_0',['Potion',['../classPotion.html',1,'']]]
 ];

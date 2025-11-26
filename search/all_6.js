@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['findtankiest_0',['findTankiest',['../classBattleSimulator.html#a2bc142d5ad46e744466ecbd30cb4175e',1,'BattleSimulator']]]
+  ['findtankiest_0',['findTankiest',['../Analyzer_8hpp.html#af26756f0a0b4b47c76752d79229e0573',1,'Analyzer.hpp']]]
 ];

@@ -94,6 +94,9 @@ $(document).ready(function(){initNavTree('main_8cpp.html',''); initResizable(); 
   <div class="headertitle"><div class="title">main.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Entry point for the fantasy combat simulation engine.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;ctime&gt;</code><br />
@@ -105,9 +108,13 @@ $(document).ready(function(){initNavTree('main_8cpp.html',''); initResizable(); 
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Program entry point.  <br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Entry point for the fantasy combat simulation engine. </p>
+<p>This file initializes items, characters, strategies, and analytics systems, then runs a simulated battle between two teams. It also demonstrates pre-battle statistics, lore analysis, and turn-based combat behavior. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
 
@@ -122,6 +129,34 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Program entry point. </p>
+<p>Initializes all core gameplay components:</p><ul>
+<li>Creates weapons, potions, and character inventories.</li>
+<li>Spawns two teams with different character classes and strategies.</li>
+<li>Performs pre-battle analytics:<ul>
+<li>Win chance estimation</li>
+<li>Tankiest character detection</li>
+</ul>
+</li>
+<li>Uses LoreAI to analyze setting descriptions.</li>
+<li>Simulates turn-based combat for up to 10 rounds.</li>
+<li>Declares a winner and awards XP.</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>int Exit code (0 on success). </dd></dl>
+<p>Sword: high damage, strong weapon</p>
+<p>Axe: cheaper/ weaker starting weapon</p>
+<p>Healing potion: restores 50 HP</p>
+<p>&lt; Uses aggressive decision-making</p>
+<p>&lt; Focuses on survival strategy</p>
+<p>Calculates the chance for Team A to win.</p>
+<p>Detects which character in Team A has the most durability.</p>
+<p>Extract metadata from textual game description.</p>
+<p>Simulates up to 10 turns of combat.</p>
+<p>Each character performs an action per round according to their strategy:</p><ul>
+<li>Warriors use aggressive actions.</li>
+<li>Mages use defensive/cautious behavior.</li>
+</ul>
 
 </div>
 </div>

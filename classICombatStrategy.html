@@ -96,6 +96,9 @@ $(document).ready(function(){initNavTree('classICombatStrategy.html',''); initRe
 </div><!--header-->
 <div class="contents">
 
+<p>Interface for all combat strategies.  
+ <a href="classICombatStrategy.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Strategy_8hpp_source.html">Strategy.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ICombatStrategy:</div>
@@ -103,7 +106,7 @@ Inheritance diagram for ICombatStrategy:</div>
  <div class="center">
   <img src="classICombatStrategy.png" usemap="#ICombatStrategy_map" alt=""/>
   <map id="ICombatStrategy_map" name="ICombatStrategy_map">
-<area href="classAggressiveStrategy.html" alt="AggressiveStrategy" shape="rect" coords="0,56,123,80"/>
+<area href="classAggressiveStrategy.html" title="Aggressive &quot;Berserker&quot; strategy." alt="AggressiveStrategy" shape="rect" coords="0,56,123,80"/>
 <area href="classDefensiveStrategy.html" alt="DefensiveStrategy" shape="rect" coords="133,56,256,80"/>
   </map>
 </div></div>
@@ -113,11 +116,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae06795f39149539bf3589fac93081bf1" id="r_ae06795f39149539bf3589fac93081bf1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICombatStrategy.html#ae06795f39149539bf3589fac93081bf1">~ICombatStrategy</a> ()=default</td></tr>
 <tr class="separator:ae06795f39149539bf3589fac93081bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9775546579fd1987b84db81ab3b3f9bf" id="r_a9775546579fd1987b84db81ab3b3f9bf"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICombatStrategy.html#a9775546579fd1987b84db81ab3b3f9bf">decideAction</a> (int currentHp, int maxHp, int enemyHp) const =0</td></tr>
+<tr class="memdesc:a9775546579fd1987b84db81ab3b3f9bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the action a character performs during their turn.  <br /></td></tr>
 <tr class="separator:a9775546579fd1987b84db81ab3b3f9bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a499db1cd40e7341d3ff5e2ef4a34c129" id="r_a499db1cd40e7341d3ff5e2ef4a34c129"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classICombatStrategy.html#a499db1cd40e7341d3ff5e2ef4a34c129">getName</a> () const =0</td></tr>
 <tr class="separator:a499db1cd40e7341d3ff5e2ef4a34c129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface for all combat strategies. </p>
+<p>A strategy defines how a character behaves during battle. Each implementation decides which action to take based on current HP, maximum HP, and the enemy's HP. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae06795f39149539bf3589fac93081bf1" name="ae06795f39149539bf3589fac93081bf1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae06795f39149539bf3589fac93081bf1">&#9670;&#160;</a></span>~ICombatStrategy()</h2>
 
@@ -183,6 +190,22 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Determines the action a character performs during their turn. </p>
+<p>Possible returned values depend on your game design:</p><ul>
+<li>0 — basic attack</li>
+<li>1 — special/aggressive attack</li>
+<li>2 — defensive or healing action</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentHp</td><td>Current HP of the character. </td></tr>
+    <tr><td class="paramname">maxHp</td><td>Maximum HP of the character. </td></tr>
+    <tr><td class="paramname">enemyHp</td><td>Current HP of the enemy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Integer code representing chosen action. </dd></dl>
 
 <p>Implemented in <a class="el" href="classAggressiveStrategy.html#aec2dce7bacbabbbb47b5bc32485fd45c">AggressiveStrategy</a>, and <a class="el" href="classDefensiveStrategy.html#ad8db29a1faa732d953ef2e7f29f54697">DefensiveStrategy</a>.</p>
 

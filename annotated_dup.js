@@ -7,7 +7,6 @@ var annotated_dup =
     [ "Entity", "classEntity.html", "classEntity" ],
     [ "ICombatStrategy", "classICombatStrategy.html", "classICombatStrategy" ],
     [ "Item", "classItem.html", "classItem" ],
-    [ "LoreAI", "classLoreAI.html", "classLoreAI" ],
     [ "Mage", "classMage.html", "classMage" ],
     [ "Potion", "classPotion.html", "classPotion" ],
     [ "Warrior", "classWarrior.html", "classWarrior" ],

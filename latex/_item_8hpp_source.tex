@@ -1,0 +1,68 @@
+\doxysection{Item.\+hpp}
+\hypertarget{_item_8hpp_source}{}\label{_item_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ANTONCHIK\_ITEM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ANTONCHIK\_ITEM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }Item\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00009\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{double}\ weight;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ condition;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ Item(std::string\ n,\ \textcolor{keywordtype}{double}\ w)\ :\ name(n),\ weight(w),\ condition(100)\ \{\}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~Item()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ getName()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ name;\ \}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ repair(\textcolor{keywordtype}{int}\ amount)\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ condition\ +=\ amount;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (condition\ >\ 100)\ condition\ =\ 100;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ useEffect()\ =\ 0;}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }Weapon\ :\ \textcolor{keyword}{public}\ Item\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ minDmg;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ maxDmg;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ Weapon(std::string\ n,\ \textcolor{keywordtype}{double}\ w,\ \textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ max)}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ :\ Item(n,\ w),\ minDmg(min),\ maxDmg(max)\ \{\}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ useEffect()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (condition\ <=\ 0)\ \textcolor{keywordflow}{return}\ 1;\ \textcolor{comment}{//\ Зламана\ зброя\ наносить\ 1\ шкоди}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ base\ =\ minDmg\ +\ (rand()\ \%\ (maxDmg\ -\/\ minDmg\ +\ 1));}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ conditionFactor\ =\ (double)condition\ /\ 100.0;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ condition\ -\/=\ 2;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(base\ *\ conditionFactor);}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }Potion\ :\ \textcolor{keyword}{public}\ Item\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ healPower;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ isEmpty;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ Potion(std::string\ n,\ \textcolor{keywordtype}{double}\ w,\ \textcolor{keywordtype}{int}\ power)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ :\ Item(n,\ w),\ healPower(power),\ isEmpty(\textcolor{keyword}{false})\ \{\}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ useEffect()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isEmpty)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ isEmpty\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ healPower;}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//ANTONCHIK\_ITEM\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,83 @@
+\doxysection{Warrior Class Reference}
+\hypertarget{class_warrior}{}\label{class_warrior}\index{Warrior@{Warrior}}
+Inheritance diagram for Warrior\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_warrior}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_warrior_a177effe12ae0eb61995124357437c605}\label{class_warrior_a177effe12ae0eb61995124357437c605} 
+{\bfseries Warrior} (std\+::string n, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_combat_strategy}{ICombat\+Strategy}} $>$ s)
+\item 
+void \mbox{\hyperlink{class_warrior_af7707049b37a090b2c700953c0a949c4}{update}} () override
+\item 
+int \mbox{\hyperlink{class_warrior_abc57957a36500655a41e8bf9f0d9fbdd}{perform\+Turn}} (\mbox{\hyperlink{class_character}{Character}} \texorpdfstring{$\ast$}{*}target) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_character}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Character} (std\+::string n, int h, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_combat_strategy}{ICombat\+Strategy}} $>$ s)
+\item 
+bool {\bfseries is\+Alive} () const
+\item 
+std\+::string {\bfseries get\+Name} () const
+\item 
+int {\bfseries get\+Hp} () const
+\item 
+void {\bfseries add\+Item} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_item}{Item}} $>$ it)
+\item 
+void {\bfseries gain\+Xp} (int amount)
+\item 
+void {\bfseries take\+Damage} (int dmg)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_character}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\item 
+int {\bfseries hp}
+\item 
+int {\bfseries max\+Hp}
+\item 
+int {\bfseries xp}
+\item 
+int {\bfseries level}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_item}{Item}} $>$ $>$ {\bfseries inventory}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_i_combat_strategy}{ICombat\+Strategy}} $>$ {\bfseries ai}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_warrior_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_warrior_abc57957a36500655a41e8bf9f0d9fbdd}\index{Warrior@{Warrior}!performTurn@{performTurn}}
+\index{performTurn@{performTurn}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{performTurn()}{performTurn()}}
+{\footnotesize\ttfamily \label{class_warrior_abc57957a36500655a41e8bf9f0d9fbdd} 
+int Warrior\+::perform\+Turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_character}{Character}} \texorpdfstring{$\ast$}{*}}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_character}{Character}}.
+
+\Hypertarget{class_warrior_af7707049b37a090b2c700953c0a949c4}\index{Warrior@{Warrior}!update@{update}}
+\index{update@{update}!Warrior@{Warrior}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_warrior_af7707049b37a090b2c700953c0a949c4} 
+void Warrior\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_entity}{Entity}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Character.\+hpp\end{DoxyCompactItemize}

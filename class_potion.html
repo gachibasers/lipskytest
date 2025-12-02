@@ -92,6 +92,9 @@ $(function(){initNavTree('class_potion.html','','class_potion-members'); });
 </div><!--header-->
 <div class="contents">
 
+<p>Зілля для лікування.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_item_8hpp_source.html">Item.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Potion:</div>
@@ -99,28 +102,39 @@ Inheritance diagram for Potion:</div>
  <div class="center">
   <img src="class_potion.png" usemap="#Potion_map" alt=""/>
   <map id="Potion_map" name="Potion_map">
-<area href="class_item.html" alt="Item" shape="rect" coords="0,0,47,24"/>
+<area href="class_item.html" title="Базовий абстрактний клас для всіх предметів гри." alt="Item" shape="rect" coords="0,0,47,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a50ed03069b27c3d9255c7044fe20ab8e" id="r_a50ed03069b27c3d9255c7044fe20ab8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50ed03069b27c3d9255c7044fe20ab8e">Potion</a> (std::string n, double w, int power)</td></tr>
+<tr class="memdesc:a50ed03069b27c3d9255c7044fe20ab8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Створює зілля.  <br /></td></tr>
 <tr class="memitem:a825c3a67482c8d427ab4bc6364ae6e01" id="r_a825c3a67482c8d427ab4bc6364ae6e01"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a825c3a67482c8d427ab4bc6364ae6e01">useEffect</a> () override</td></tr>
+<tr class="memdesc:a825c3a67482c8d427ab4bc6364ae6e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Використання зілля.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_item"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_item')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_item.html">Item</a></td></tr>
 <tr class="memitem:a85d496754bbe22e405e85e949bf0e58c inherit pub_methods_class_item" id="r_a85d496754bbe22e405e85e949bf0e58c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a85d496754bbe22e405e85e949bf0e58c">Item</a> (std::string n, double w)</td></tr>
+<tr class="memdesc:a85d496754bbe22e405e85e949bf0e58c inherit pub_methods_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Створює новий предмет.  <br /></td></tr>
 <tr class="memitem:af11f5c0709f76d8683d95d8476be85a4 inherit pub_methods_class_item" id="r_af11f5c0709f76d8683d95d8476be85a4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#af11f5c0709f76d8683d95d8476be85a4">~Item</a> ()=default</td></tr>
 <tr class="memitem:a5e4095868ead0c681bc2e18b8507f735 inherit pub_methods_class_item" id="r_a5e4095868ead0c681bc2e18b8507f735"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a5e4095868ead0c681bc2e18b8507f735">getName</a> () const</td></tr>
+<tr class="memdesc:a5e4095868ead0c681bc2e18b8507f735 inherit pub_methods_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повертає назву предмета.  <br /></td></tr>
 <tr class="memitem:a55b3d57cee2871c46d38e7e0ae8b399a inherit pub_methods_class_item" id="r_a55b3d57cee2871c46d38e7e0ae8b399a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a55b3d57cee2871c46d38e7e0ae8b399a">repair</a> (int amount)</td></tr>
+<tr class="memdesc:a55b3d57cee2871c46d38e7e0ae8b399a inherit pub_methods_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ремонтує предмет, збільшуючи його стан.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_item"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_item')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="class_item.html">Item</a></td></tr>
 <tr class="memitem:a342b7a351c9ae1c5430aa3ef65b670bd inherit pro_attribs_class_item" id="r_a342b7a351c9ae1c5430aa3ef65b670bd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a342b7a351c9ae1c5430aa3ef65b670bd">name</a></td></tr>
+<tr class="memdesc:a342b7a351c9ae1c5430aa3ef65b670bd inherit pro_attribs_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Назва предмета.  <br /></td></tr>
 <tr class="memitem:a33ade95cc8bd93d31338d004c014b4f8 inherit pro_attribs_class_item" id="r_a33ade95cc8bd93d31338d004c014b4f8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a33ade95cc8bd93d31338d004c014b4f8">weight</a></td></tr>
+<tr class="memdesc:a33ade95cc8bd93d31338d004c014b4f8 inherit pro_attribs_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вага предмета.  <br /></td></tr>
 <tr class="memitem:a8dac673e70347dcd926b7cf69c7c6eeb inherit pro_attribs_class_item" id="r_a8dac673e70347dcd926b7cf69c7c6eeb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item.html#a8dac673e70347dcd926b7cf69c7c6eeb">condition</a></td></tr>
+<tr class="memdesc:a8dac673e70347dcd926b7cf69c7c6eeb inherit pro_attribs_class_item"><td class="mdescLeft">&#160;</td><td class="mdescRight">Стан предмета (0–100).  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Зілля для лікування. </p>
+<p>Одноразовий предмет: після використання стає порожнім. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a50ed03069b27c3d9255c7044fe20ab8e" name="a50ed03069b27c3d9255c7044fe20ab8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50ed03069b27c3d9255c7044fe20ab8e">&#9670;&#160;</a></span>Potion()</h2>
 
@@ -153,6 +167,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Створює зілля. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Назва </td></tr>
+    <tr><td class="paramname">w</td><td>Вага </td></tr>
+    <tr><td class="paramname">power</td><td>Сила лікування </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -178,6 +202,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Використання зілля. </p>
+<p>Якщо зілля вже використане → повертає 0. Після першого використання зілля спустошується.</p>
+<dl class="section return"><dt>Returns</dt><dd>Відновлені HP. </dd></dl>
 
 <p>Implements <a class="el" href="class_item.html#a73234b0d149321fd1e4a9cfda88c5953">Item</a>.</p>
 

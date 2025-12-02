@@ -92,6 +92,9 @@ $(function(){initNavTree('class_aggressive_strategy.html','','class_aggressive_s
 </div><!--header-->
 <div class="contents">
 
+<p>Aggressive "Berserker" strategy.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_strategy_8hpp_source.html">Strategy.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for AggressiveStrategy:</div>
@@ -99,7 +102,7 @@ Inheritance diagram for AggressiveStrategy:</div>
  <div class="center">
   <img src="class_aggressive_strategy.png" usemap="#AggressiveStrategy_map" alt=""/>
   <map id="AggressiveStrategy_map" name="AggressiveStrategy_map">
-<area href="class_i_combat_strategy.html" alt="ICombatStrategy" shape="rect" coords="0,0,123,24"/>
+<area href="class_i_combat_strategy.html" title="Interface for all combat strategies." alt="ICombatStrategy" shape="rect" coords="0,0,123,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -110,7 +113,14 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_i_combat_strategy"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_i_combat_strategy')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_i_combat_strategy.html">ICombatStrategy</a></td></tr>
 <tr class="memitem:ae06795f39149539bf3589fac93081bf1 inherit pub_methods_class_i_combat_strategy" id="r_ae06795f39149539bf3589fac93081bf1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_combat_strategy.html#ae06795f39149539bf3589fac93081bf1">~ICombatStrategy</a> ()=default</td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Aggressive "Berserker" strategy. </p>
+<p>A character using this strategy tends to attack aggressively most of the time. Behavior rules:</p><ul>
+<li>If the enemy HP &lt; 20 → always attack aggressively.</li>
+<li>If own HP &gt; 40% → aggressive attack.</li>
+<li>Otherwise → randomly choose between normal and aggressive attack. </li>
+</ul>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aec2dce7bacbabbbb47b5bc32485fd45c" name="aec2dce7bacbabbbb47b5bc32485fd45c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec2dce7bacbabbbb47b5bc32485fd45c">&#9670;&#160;</a></span>decideAction()</h2>
 
@@ -142,6 +152,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Strategy name: "Berserker". </dd></dl>
 
 <p>Implements <a class="el" href="class_i_combat_strategy.html#a9775546579fd1987b84db81ab3b3f9bf">ICombatStrategy</a>.</p>
 

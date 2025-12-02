@@ -92,14 +92,27 @@ $(function(){initNavTree('class_battle_simulator.html','','class_battle_simulato
 </div><!--header-->
 <div class="contents">
 
+<p>A generic battle simulation helper.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_analyzer_8hpp_source.html">Analyzer.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a54794472135a5b08241c2d171a7c481b" id="r_a54794472135a5b08241c2d171a7c481b"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54794472135a5b08241c2d171a7c481b">calculateWinChance</a> (const std::vector&lt; T &gt; &amp;teamA, const std::vector&lt; T &gt; &amp;teamB)</td></tr>
-<tr class="memitem:a2bc142d5ad46e744466ecbd30cb4175e" id="r_a2bc142d5ad46e744466ecbd30cb4175e"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bc142d5ad46e744466ecbd30cb4175e">findTankiest</a> (const std::vector&lt; T &gt; &amp;units)</td></tr>
+<tr class="memdesc:a54794472135a5b08241c2d171a7c481b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates Team A's win probability based on total HP.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class BattleSimulator&lt; T &gt;</div><p>A generic battle simulation helper. </p>
+<p>This template class provides utility methods for analyzing teams of characters. It is intended to work with smart pointers such as std::shared_ptr&lt;Character&gt;.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>A type representing a character or unit pointer (e.g., std::shared_ptr&lt;Character&gt;). </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a54794472135a5b08241c2d171a7c481b" name="a54794472135a5b08241c2d171a7c481b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54794472135a5b08241c2d171a7c481b">&#9670;&#160;</a></span>calculateWinChance()</h2>
 
@@ -129,32 +142,20 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a2bc142d5ad46e744466ecbd30cb4175e" name="a2bc142d5ad46e744466ecbd30cb4175e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bc142d5ad46e744466ecbd30cb4175e">&#9670;&#160;</a></span>findTankiest()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">T <a class="el" href="class_battle_simulator.html">BattleSimulator</a>&lt; T &gt;::findTankiest </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>units</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Calculates Team A's win probability based on total HP. </p>
+<p>The formula used is:   </p><p class="formulaDsp">
+<picture><source srcset="form_0_dark.png" media="(prefers-color-scheme: dark)"/><img class="formulaDsp" alt="\&zwj;[  \text{WinChance} = \frac{\sum HP_A}{\sum HP_A + \sum HP_B} \times 100
+\&zwj;]" src="form_0.png"/></picture>
+</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">teamA</td><td>A vector of units (pointers) representing the first team. </td></tr>
+    <tr><td class="paramname">teamB</td><td>A vector of units (pointers) representing the second team. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Percentage value from 0 to 100 representing win probability.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If both teams have 0 total HP, returns 0. </dd></dl>
 
 </div>
 </div>

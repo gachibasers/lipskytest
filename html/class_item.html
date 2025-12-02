@@ -92,6 +92,9 @@ $(function(){initNavTree('class_item.html','','class_item-members'); });
 </div><!--header-->
 <div class="contents">
 
+<p>Базовий абстрактний клас для всіх предметів гри.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_item_8hpp_source.html">Item.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Item:</div>
@@ -99,26 +102,41 @@ Inheritance diagram for Item:</div>
  <div class="center">
   <img src="class_item.png" usemap="#Item_map" alt=""/>
   <map id="Item_map" name="Item_map">
-<area href="class_potion.html" alt="Potion" shape="rect" coords="0,56,58,80"/>
-<area href="class_weapon.html" alt="Weapon" shape="rect" coords="68,56,126,80"/>
+<area href="class_potion.html" title="Зілля для лікування." alt="Potion" shape="rect" coords="0,56,58,80"/>
+<area href="class_weapon.html" title="Зброя, яка завдає шкоди залежно від стану." alt="Weapon" shape="rect" coords="68,56,126,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a85d496754bbe22e405e85e949bf0e58c" id="r_a85d496754bbe22e405e85e949bf0e58c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85d496754bbe22e405e85e949bf0e58c">Item</a> (std::string n, double w)</td></tr>
+<tr class="memdesc:a85d496754bbe22e405e85e949bf0e58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Створює новий предмет.  <br /></td></tr>
 <tr class="memitem:af11f5c0709f76d8683d95d8476be85a4" id="r_af11f5c0709f76d8683d95d8476be85a4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af11f5c0709f76d8683d95d8476be85a4">~Item</a> ()=default</td></tr>
 <tr class="memitem:a5e4095868ead0c681bc2e18b8507f735" id="r_a5e4095868ead0c681bc2e18b8507f735"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e4095868ead0c681bc2e18b8507f735">getName</a> () const</td></tr>
+<tr class="memdesc:a5e4095868ead0c681bc2e18b8507f735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Повертає назву предмета.  <br /></td></tr>
 <tr class="memitem:a55b3d57cee2871c46d38e7e0ae8b399a" id="r_a55b3d57cee2871c46d38e7e0ae8b399a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55b3d57cee2871c46d38e7e0ae8b399a">repair</a> (int amount)</td></tr>
+<tr class="memdesc:a55b3d57cee2871c46d38e7e0ae8b399a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ремонтує предмет, збільшуючи його стан.  <br /></td></tr>
 <tr class="memitem:a73234b0d149321fd1e4a9cfda88c5953" id="r_a73234b0d149321fd1e4a9cfda88c5953"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73234b0d149321fd1e4a9cfda88c5953">useEffect</a> ()=0</td></tr>
+<tr class="memdesc:a73234b0d149321fd1e4a9cfda88c5953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Використання предмета.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a342b7a351c9ae1c5430aa3ef65b670bd" id="r_a342b7a351c9ae1c5430aa3ef65b670bd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a342b7a351c9ae1c5430aa3ef65b670bd">name</a></td></tr>
+<tr class="memdesc:a342b7a351c9ae1c5430aa3ef65b670bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Назва предмета.  <br /></td></tr>
 <tr class="memitem:a33ade95cc8bd93d31338d004c014b4f8" id="r_a33ade95cc8bd93d31338d004c014b4f8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33ade95cc8bd93d31338d004c014b4f8">weight</a></td></tr>
+<tr class="memdesc:a33ade95cc8bd93d31338d004c014b4f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вага предмета.  <br /></td></tr>
 <tr class="memitem:a8dac673e70347dcd926b7cf69c7c6eeb" id="r_a8dac673e70347dcd926b7cf69c7c6eeb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dac673e70347dcd926b7cf69c7c6eeb">condition</a></td></tr>
+<tr class="memdesc:a8dac673e70347dcd926b7cf69c7c6eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Стан предмета (0–100).  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Базовий абстрактний клас для всіх предметів гри. </p>
+<p>Містить:</p><ul>
+<li>назву предмета</li>
+<li>вагу</li>
+<li>стан (0–100)</li>
+</ul>
+<p>Кожен предмет повинен реалізувати метод <a class="el" href="#a73234b0d149321fd1e4a9cfda88c5953" title="Використання предмета.">useEffect()</a>. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a85d496754bbe22e405e85e949bf0e58c" name="a85d496754bbe22e405e85e949bf0e58c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a85d496754bbe22e405e85e949bf0e58c">&#9670;&#160;</a></span>Item()</h2>
 
@@ -145,6 +163,15 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Створює новий предмет. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Назва </td></tr>
+    <tr><td class="paramname">w</td><td>Вага </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -197,6 +224,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Повертає назву предмета. </p>
+
 </div>
 </div>
 <a id="a55b3d57cee2871c46d38e7e0ae8b399a" name="a55b3d57cee2871c46d38e7e0ae8b399a"></a>
@@ -221,6 +250,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Ремонтує предмет, збільшуючи його стан. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td>Значення, на яке збільшується стан. Стан не може перевищувати 100. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -247,6 +284,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Використання предмета. </p>
+<p>Конкретна реалізація залежить від типу предмета:</p><ul>
+<li><a class="el" href="class_weapon.html" title="Зброя, яка завдає шкоди залежно від стану.">Weapon</a> → наносить шкоду</li>
+<li><a class="el" href="class_potion.html" title="Зілля для лікування.">Potion</a> → лікує</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd>Значення ефекту від використання. </dd></dl>
+
 <p>Implemented in <a class="el" href="class_potion.html#a825c3a67482c8d427ab4bc6364ae6e01">Potion</a>, and <a class="el" href="class_weapon.html#aeac4f33b17a9d67d567effd0f73479c0">Weapon</a>.</p>
 
 </div>
@@ -272,6 +316,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Стан предмета (0–100). </p>
+
 </div>
 </div>
 <a id="a342b7a351c9ae1c5430aa3ef65b670bd" name="a342b7a351c9ae1c5430aa3ef65b670bd"></a>
@@ -294,6 +340,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Назва предмета. </p>
+
 </div>
 </div>
 <a id="a33ade95cc8bd93d31338d004c014b4f8" name="a33ade95cc8bd93d31338d004c014b4f8"></a>
@@ -315,6 +363,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Вага предмета. </p>
 
 </div>
 </div>

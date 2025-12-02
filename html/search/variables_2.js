@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['difficultyrating_0',['difficultyRating',['../struct_lore_a_i_1_1_game_info.html#a2390c2616af61799af70ee302fea7270',1,'LoreAI::GameInfo']]]
+  ['hp_0',['hp',['../class_character.html#a273353643988a87a0ce03cff3870b2d9',1,'Character']]]
 ];

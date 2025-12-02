@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['maxhp_0',['maxHp',['../class_character.html#a39fd1fe17224ce4aae67ae08848533e6',1,'Character']]]
+  ['weight_0',['weight',['../class_item.html#a33ade95cc8bd93d31338d004c014b4f8',1,'Item']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['gameinfo_0',['GameInfo',['../struct_lore_a_i_1_1_game_info.html',1,'LoreAI']]]
+  ['icombatstrategy_0',['ICombatStrategy',['../class_i_combat_strategy.html',1,'']]],
+  ['item_1',['Item',['../class_item.html',1,'']]]
 ];
